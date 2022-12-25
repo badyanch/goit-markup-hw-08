@@ -1,0 +1,34 @@
+.work-list {
+    display: flex;
+    justify-content: space-between;
+    @extend %list;
+}
+
+.work-list__item {
+    position: relative;
+}
+
+.work-list__img {
+    display: block;
+}
+
+.work-list__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 27px 0;
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-secondary-accent;
+
+    background-color: $color-works-bg;
+}
+
