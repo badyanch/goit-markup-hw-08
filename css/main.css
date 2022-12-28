@@ -268,6 +268,7 @@ summary {
 }
 
 body {
+  padding-top: 60px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.71;
@@ -275,29 +276,67 @@ body {
   color: #212121;
   background-color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 480px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.section--no-top-padding {
-  padding-top: 0;
-  padding-bottom: 0;
+.section--worker {
+  background-color: #f5f4fa;
+}
+@media screen and (max-width: 1199px) {
+  .section--hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .section--no-top-padding {
+    padding-top: 0;
+  }
 }
 
 .section__title {
   margin-top: 0;
-  margin-bottom: 50px;
-  font-size: 36px;
+  margin-bottom: 30px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 
 .visually-hidden {
@@ -442,28 +481,10 @@ body {
 
 .hero {
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
-  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 480px;
   background-color: #c4c4c4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero__title {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .btn {
@@ -517,13 +538,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 .benefits-list__item {
-  width: calc((100% - 90px) / 4);
+  margin: 15px;
 }
-.benefits-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .benefits-list__item {
+    width: calc((100% - 120px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-list__item {
+    width: calc((100% - 120px) / 4);
+  }
 }
 
 .benefits-list__icon {
@@ -538,7 +569,7 @@ body {
           align-items: center;
   margin-bottom: 30px;
   height: 120px;
-  width: 270px;
+  width: 100%;
   background-color: #f5f4fa;
   border-radius: 4px;
 }
@@ -550,6 +581,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .benefits-list__title {
+    text-align: center;
+  }
 }
 
 .benefits-list__description {
@@ -571,7 +607,7 @@ body {
   position: relative;
 }
 
-.work-list__img {
+.work-list__image {
   display: block;
 }
 
@@ -592,35 +628,41 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.section--worker {
-  background-color: #f5f4fa;
-}
-
 .worker-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 .worker-list__item {
+  margin: 15px;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.worker-list__img {
+.team-list__image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .team-list__description {
-  padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team-list__description {
+    padding-bottom: 30px;
+  }
 }
 
-.team-list__name, .team-list__profession {
+.team-list__name,
+.team-list__profession {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
