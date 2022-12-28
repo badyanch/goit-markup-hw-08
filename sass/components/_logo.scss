@@ -1,14 +1,32 @@
 .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-decoration: none;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 26px;
+        line-height: 1.19;
+        letter-spacing: 0.03em;
+    }
 }
 
 .page-header__logo {
     color: $color-icon;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
+}
+
+.logo__hightlight {
+    color: $color-accent;
 }
 
 .page-footer__logo {
@@ -16,8 +34,4 @@
     margin-bottom: 20px;
 
     color: $color-secondary-accent;
-}
-
-.logo__hightlight {
-    color: $color-accent;
 }
