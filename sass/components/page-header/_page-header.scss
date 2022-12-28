@@ -1,0 +1,27 @@
+.page-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 60px;
+
+    background-color: $color-primary-bg;
+    border-bottom: 1px solid #ececec;
+
+    @media screen and (min-width: $tablet) {
+        min-height: 80px;
+    }
+}
+
+.page-header__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $max-mobile) {
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 9px;
+    }
+}
